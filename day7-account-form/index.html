@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day-7 challenge Create New Account
+  </title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+
+<div class="flex justify-between">
+
+  <div class=" m-24">
+    <p class="text-gray-400 font-bold">START FOR FREE</p>
+    <h1 class="font-bold text-5xl">Create new account</h1>
+
+
+    <div class="flex flex-col gap-4"> <!--for the alignments of all the buttons -->
+
+    <span class=" flex flex-row gap-4 p-7"> <!--for the name buttons -->
+
+      
+        
+      <button class="flex flex-col items-stretch p-1 border-2 w-52 h-14 rounded-xl text-sm bg-violet-100 ">
+        
+        <div class="flex justify-between">
+        <span>First name</span>  
+        <span><img src="https://img.icons8.com/?size=24&id=90032&format=png" alt="personal"/></span>
+        
+      </div>
+        <input type="text" placeholder="Enter your name" class="bg-violet-100 font-bold border-none focus:outline-none">
+
+      </button>
+
+
+      <button class="flex flex-col items-stretch p-1 border-2 w-52 h-14 rounded-xl text-sm bg-violet-100"> 
+        <div class="flex justify-between">
+          <span>Last name</span>
+          <span><img src="https://img.icons8.com/?size=24&id=90032&format=png" alt="personal"/></span>
+        </div>
+        <input type="text" placeholder="Enter your name" class="bg-violet-100 font-bold border-none focus:outline-none">
+
+
+      </button> 
+    </span>
+
+    <span class="flex flex-col gap-4 px-7">
+        
+      <button class="flex flex-col items-stretch p-1 border-2 w-[440px] h-14 rounded-xl text-sm bg-purple-100">
+  
+    <div class="flex justify-between" >
+      <span> Email</span>  
+      <span><img src="https://img.icons8.com/?size=24&id=85500&format=png" alt="Email"/></span>
+    </div>
+      
+    <input type="email" placeholder="Enter your email" class="bg-violet-100  font-bold border-none focus:outline-none">
+    </button>
+
+
+    <button class="flex flex-col items-stretch p-1 border-2 w-[440px] h-14 rounded-xl text-sm text-blue-500 hover:border-blue-500"> 
+      
+      <div class="flex justify-between">
+        <span>Password</span>
+        <span><img id="changeable" src="https://img.icons8.com/?size=24&id=121528&format=png" alt="password" onclick="toggle()" /></span>
+      </div>
+
+    <input id="password-Input" type="password" placeholder="Enter your password" class="font-bold text-black border-none focus:outline-none" >
+    </button>
+
+    <span class="flex flex-row gap-2">
+    <p class="text-gray-400 font-bold">Already have an account? </p> 
+    <a href="URL" class="text-blue-600 font-bold hover:underline">Sign In</a>
+    </span>
+
+    <button class="flex justify-center items-center p-1 border-2 w-[440px] h-12 rounded-full bg-blue-500 text-white border-blue-500"> Create account</button>
+    </span>
+
+    </div>
+  </div>
+
+  <img src="https://th.bing.com/th/id/OIP.U878fCTKh0Ec47PEODOUZAHaEK?rs=1&pid=ImgDetMain"  
+  alt="bg img"
+  class="flex justify-between w-[750px] h-[700px]"/>
+</div>
+
+<script>
+  //js function to change the image
+  function toggle(){
+    const newimg = document.getElementById('changeable')
+    const passwordInput = document.getElementById('password-Input')
+
+    if(newimg.src.includes('https://img.icons8.com/?size=24&id=121528&format=png')){
+      newimg.src= 'https://img.icons8.com/?size=24&id=84871&format=png';
+      passwordInput.type = 'text';
+
+    }
+    else{
+      passwordInput.type = 'password';
+      newimg.src='https://img.icons8.com/?size=24&id=121528&format=png';
+    }
+     
+  }
+</script>
+</body>
+</html>
